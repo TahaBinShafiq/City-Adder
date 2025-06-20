@@ -2,13 +2,14 @@ var cities = []
 var list = document.getElementById("list");
 
 function addToList(){
-    var city = prompt("Enter the city to add");
+    var city = document.getElementById("input").value;
     if(city === '' || city === null){
         alert('Please write a city name')
     }else if (cities.some(c => c.toLowerCase() === city.toLowerCase())){
         alert("City is already in the list")
-    }else {cities.push(city);
+    }else {cities.push(city)
             updateList()
+            input.value =""
     }
 }
 
@@ -35,7 +36,7 @@ function deleteItem(index){
 
 function editCity(index){
     var userValue = prompt("Enter the new city" , cities[index])
-    if(city === '' || city === null){
+    if(userValue === '' || userValue === null ){
         alert('Please write a city name')
 }else{cities.splice(index, 1 , userValue)
     updateList()
