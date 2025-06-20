@@ -36,11 +36,14 @@ function deleteItem(index){
 
 function editCity(index){
     var userValue = prompt("Enter the new city" , cities[index])
-    if(userValue === '' || userValue === null ){
-        alert('Please write a city name')
-}else{cities.splice(index, 1 , userValue)
-    updateList()
-}
+    if(userValue === null){
+        return;
+}else if (userValue.trim() === ''){
+    alert('Please write a city name')
+    } else {
+        cities.splice(index, 1 , userValue)
+     updateList()
+    }
 }
 
 
