@@ -1,5 +1,6 @@
 var cities = getDataFromStorage() || []
 var list = document.getElementById("list");
+updateList();
 
 function addToList() {
     var city = document.getElementById("input").value;
