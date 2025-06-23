@@ -1,6 +1,5 @@
-body{
-    background-color: #202020;
-   
+body {
+  background-color: #202020;
 }
 
 h1 {
@@ -13,7 +12,7 @@ h1 {
   animation: slideIn 1s ease-out;
   margin-top: 20px;
   margin-bottom: 0px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes slideIn {
@@ -21,35 +20,37 @@ h1 {
     opacity: 0;
     transform: translateY(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.first-div{
-    display: flex;
-    justify-content: center;
-    background-color: black;
-    width: 500px;
-    height: 100vh;
-    max-width: 1200px;
-    margin: 0px auto;
-    padding-top: 30px;
-    border-radius: 5px;
-    max-height: max-content;
+.first-div {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  width: 500px;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-top: 30px;
+  border-radius: 5px;
+  max-height: max-content;
 }
 
-.second-div{
-    border: 1px solid rgb(77, 77, 77);
-    min-height: 80%;
-    max-height: max-content;
-    width: 250px;
-    margin-top: 30px;
-    justify-content:left;
-    display: flex;
+.second-div {
+  border: 1px solid rgb(77, 77, 77);
+  min-height: 80%;
+  max-height: max-content;
+  width: 250px;
+  margin-top: 30px;
+  justify-content: left;
+  display: flex;
 }
-#input{
+
+#input {
   height: 30px;
   width: 240px;
   background-color: #000000;
@@ -58,118 +59,122 @@ h1 {
   outline: none;
 }
 
-#input::placeholder{
+#input::placeholder {
   font-size: larger;
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0px;
-    height: auto;
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  height: auto;
 }
 
-#list{
-    padding-left: 54px;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#list {
+  padding-left: 54px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* From Uiverse.io by andrew-demchenk0 */ 
+
+/* From Uiverse.io by andrew-demchenk0 */
 .button {
-    position: relative;
-    width: 150px;
-    height: 40px;
-    cursor: pointer;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+  margin-top: 20px;
+}
+
+.button,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.button:hover {
+  background: #34974d;
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active .button__icon {
+  background-color: #2e8644;
+}
+
+.button:active {
+  border: 1px solid #2e8644;
+}
+
+
+@media screen and (max-width:600px) {
+
+  body {
+    background-color: rgb(0, 0, 0);
+  }
+
+  h1 {
+    margin-top: 0px;
+  }
+
+  .first-div {
     display: flex;
-    align-items: center;
-    border: 1px solid #34974d;
-    background-color: #3aa856;
-    margin-top: 20px;
-  }
-  
-  .button, .button__icon, .button__text {
-    transition: all 0.3s;
-  }
-  
-  .button .button__text {
-    transform: translateX(30px);
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .button .button__icon {
-    position: absolute;
-    transform: translateX(109px);
-    height: 100%;
-    width: 39px;
-    background-color: #34974d;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-top: 0px;
+    border-radius: 5px;
+    max-height: max-content;
+    align-items: center;
   }
-  
-  .button .svg {
-    width: 30px;
-    stroke: #fff;
+
+  section {
+    height: 90vh;
+    display: flex;
+    justify-content: none;
   }
-  
-  .button:hover {
-    background: #34974d;
-  }
-  
-  .button:hover .button__text {
-    color: transparent;
-  }
-  
-  .button:hover .button__icon {
-    width: 148px;
-    transform: translateX(0);
-  }
-  
-  .button:active .button__icon {
-    background-color: #2e8644;
-  }
-  
-  .button:active {
-    border: 1px solid #2e8644;
+
+  .second-div {
+    height: 100%;
+
   }
 
 
-  @media screen and (max-width:600px) {
-
-    body{
-        background-color: rgb(0, 0, 0);
-    }
-
-    h1{
-      margin-top: 0px;
-    }
-   
-    .first-div{
-        display: flex;
-        justify-content: center;
-        background-color: rgb(0, 0, 0);
-        width: 100%;
-        height: 100vh;
-        max-width: 1200px;
-        margin: 0px auto;
-        padding-top: 0px;
-        border-radius: 5px;
-        max-height: max-content;
-        align-items: center;
-    }
-
-    section{
-      height: 90vh;
-      display: flex;
-      justify-content: none;
-    }
-
-    .second-div{
-        height: 100%;
-
-    }
-    
-    
-  }
+}
